@@ -1,0 +1,19 @@
+<!--
+	Beers Page
+-->
+<div id="beers-page" class="page">
+	<h1>Beers</h1>
+
+	<div search-box></div>
+	<br>
+	<br>
+	<ul>
+		<li ng-repeat="beer in beers | filter:search | orderBy:'name'" ng-class-odd="'odd'" ng-class-even="'even'" class="list-item">
+			<b>Beer Name:</b> {{beer.name}}
+			<br>
+			<b>Brewed By:</b> {{beer.brewery.name}}
+			<br>
+			<b>Description:</b> {{beer.description | truncate:150}}
+		</li>
+	</ul>
+</div><!-- end #beers-page -->

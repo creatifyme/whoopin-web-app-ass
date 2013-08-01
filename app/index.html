@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="beerApp">
+	<head>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="container">
+			<div ng-controller="navCtrl">
+				<nav class="app-nav clearfix">
+					<img src="img/logo.png" alt="Logo" width="100px">
+					<a href="#/about" ng-class="navClass('about')">About</a>
+					<a href="#/breweries" ng-class="navClass('breweries')">Breweries</a>
+					<a href="#/beers" ng-class="navClass('beers')">Beers</a>
+				</nav>
+			</div><!-- end navCtrl -->
+
+
+			<!--
+				All Content will load into here
+			-->
+			<div ng-view></div>
+		</div>
+
+		<!-- 
+			Vendor Libraries
+		-->		
+		<script type="text/javascript" src="js/vendor/angular.js"></script>
+
+		<!-- 
+			App Scripts
+		-->
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/config.js"></script>
+		<script type="text/javascript" src="js/controllers.js"></script>
+		<script type="text/javascript" src="js/services.js"></script>
+		<script type="text/javascript" src="js/filters.js"></script>
+		<script type="text/javascript" src="js/directives.js"></script>
+	</body>
+</html>

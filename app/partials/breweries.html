@@ -1,0 +1,17 @@
+<!--
+	Breweries Page
+-->
+<div id="breweries-page" class="page">
+	<h1>Breweries</h1>
+
+	<div search-box></div>
+	<br>
+	<br>
+	<ul>
+		<li ng-repeat="brewery in breweries | filter:search | orderBy:'name'" ng-class-odd="'odd'" ng-class-even="'even'" class="list-item">
+			<b>Brewed Name:</b> {{brewery.name}}
+			<br>
+			<b>link:</b> <a ng-href="{{brewery.url}}" target="_blank">{{brewery.url}}</a>
+		</li>
+	</ul>
+</div><!-- end #breweries-page -->

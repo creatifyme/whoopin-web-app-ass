@@ -1,0 +1,16 @@
+<!doctype html>
+<html ng-app>
+	<head>
+		<script src="lib/angular.min.js"></script>
+	</head>
+	<body>
+
+		<div ng-include src="'partials/header.html'"></div>
+
+		<ul ng-init="beers=[{'name':'beer1', 'alcoholPercent': 12},{'name':'beer2', 'alcoholPercent': 3.5},{'name':'beer3', 'alcoholPercent': 10},{'name':'beer4', 'alcoholPercent': 20},{'name':'beer5', 'alcoholPercent': 9.25}];">
+			<li ng-repeat="beer in beers">
+				[{{$index + 1}}] {{beer.name}} which is {{beer.alcoholPercent}}%
+			</li>
+		</ul>
+	</body>
+</html>
